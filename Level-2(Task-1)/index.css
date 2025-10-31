@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 28, 28);
+    min-height: 100vh;
+    color: white;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(55, 54, 54, 0.878);
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(245, 245, 245, 0.71);
+    padding: 16px;
+}
+
+/* ======= Heading Section ======= */
+.heading-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading {
+    color: orange;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.heading-description {
+    color: rgb(192, 189, 189);
+    font-size: 0.95rem;
+    max-width: 800px;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* ======= Calculator Section ======= */
+.calculator-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.instruction-list {
+    width: 50%;
+    background-color: rgba(252, 153, 5, 0.079);
+    border-left: 3.5px solid rgba(255, 166, 0, 0.879);
+    border-radius: 6px;
+    padding: 24px;
+
+}
+
+.instruction-heading {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.instructions {
+    color: rgba(231, 229, 229, 0.881);
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.calculator {
+    width: 50%;
+    padding: 6px;
+}
+
+.display {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: white;
+    font-size: 1.3rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.718);
+    margin-bottom: 8px;
+    border-radius: 6px;
+    text-align: right;
+    overflow-x: auto;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn {
+    padding: 12px;
+    border: 0.7px solid whitesmoke;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: 0px 1.5px 2px rgba(255, 255, 255, 0.821);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 166, 0, 0.15);
+    transform: scale(1.03);
+}
+
+.operator-btn, .swipe-btn {
+    color: orange;
+    font-weight: 700;
+}
+
+.nill {
+    cursor: default;
+}
+
+.function-btn {
+    display: none;
+}
+
+
+/*  RESPONSIVE DESIGN SECTION */
+
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+    .main-heading {
+        font-size: 1.8rem;
+    }
+
+    .heading-description {
+        font-size: 0.9rem;
+        max-width: 600px;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instruction-list {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 1.6rem;
+    }
+
+    .heading-description {
+        font-size: 0.85rem;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .instruction-list {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .instructions {
+        font-size: 0.85rem;
+    }
+
+    .calculator {
+        width: 100%;
+    }
+
+    .buttons-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+    }
+
+    .btn {
+        padding: 10px 0;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .display {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+    .main-heading {
+        font-size: 1.4rem;
+    }
+
+    .heading-description {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .display {
+        font-size: 1rem;
+    }
+}

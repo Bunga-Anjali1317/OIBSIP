@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive To-Do List</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="todos-bg-container">
+    <div class="container py-4">
+      <h1 class="todos-heading text-center mb-4">To-Do List</h1>
+
+      <div class="task-input-container card p-3 shadow-sm">
+        <h3 class="create-task-heading">
+          Create <span class="create-task-heading-subpart">Task</span>
+        </h3>
+
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center">
+          <input type="text" id="todoUserInput" class="todo-user-input flex-grow-1" placeholder="What needs to be done?" />
+          <button class="button ml-sm-3 mt-3 mt-sm-0" id="addTodoButton">Add</button>
+        </div>
+      </div>
+
+      <div class="task-lists-container mt-5">
+        <div class="task-section mb-4">
+          <h3 class="todo-items-heading">Pending <span class="todo-items-heading-subpart">Tasks</span></h3>
+          <ul class="todo-items-container list-unstyled" id="pendingTasksContainer"></ul>
+        </div>
+
+        <div class="task-section">
+          <h3 class="todo-items-heading">Completed <span class="todo-items-heading-subpart">Tasks</span></h3>
+          <ul class="todo-items-container list-unstyled" id="completedTasksContainer"></ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="button" id="saveTodoButton" title="save your tasks status to local storage">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
+</body>
+</html>

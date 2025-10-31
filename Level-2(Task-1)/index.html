@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Scientific Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="main-container" aria-label="main-section-container">
+        <div class="heading-container" aria-label="main-heading-container">
+            <h1 class="main-heading">Simple Scientific Calculator</h1>
+            <p class="heading-description">A professional simple scientific calculator.This makes it an essential tool for students, scientists, and professionals - reliable,fast,easy to use</p>
+        </div>
+        <div class="calculator-container" aria-label="calculator-container">
+            <div class="instruction-list">
+                <h3 class="instruction-heading">Instructions to use the calculator:</h3>
+                <ul class="instructions">
+                    <li>Enter numbers using the on-screen buttons.</li>
+                    <li>Choose an operation ( + , − , × , ÷ , etc.) by clicking the respective button.</li>
+                    <li>Use <b>scientific functions</b> like sin, cos, tan, log, √, x², etc., for advanced calculations.</li>
+                    <li>Press "=" to get the result instantly.</li>
+                    <li><b>Use "AC"</b> to clear all input and start fresh.</li>
+                    <li><b>Use "DEL"</b> to remove the last entered digit or symbol.</li>
+                    <li>For <b>decimal</b> numbers, use the "." button.</li>
+                    <li>Parentheses ( ) can be used for complex expressions.</li>
+                    <li>Results appear on the display screen above the keypad.</li>
+                    <li>Avoid invalid inputs like multiple operators together (e.g., ++ or */).</li>
+                </ul>
+            </div>
+            <div class="calculator">
+                <div class="display" aria-label="calculator-display" id="display">0</div>
+                <div class="buttons-container" aria-label="calculator-buttons-container">
+
+                    <button class="btn nill function-btn"></button>
+                    <button class="btn function-btn" data-value="^2">x²</button>
+                    <button class="btn function-btn" data-value="1/">1/x</button>
+                    <button class="btn function-btn" data-value="ln(">ln</button>
+                    <button class="btn function-btn" data-value="log(">log</button>
+
+                    <button class="btn function-btn" data-value="sin(">sin</button>
+                    <button class="btn function-btn" data-value="cos(">cos</button>
+                    <button class="btn function-btn" data-value="tan(">tan</button>
+                    <button class="btn function-btn" data-value="(">(</button>
+                    <button class="btn function-btn" data-value=")">)</button>
+
+                    <button class="btn function-btn" data-value="!">x!</button>
+                    <button class="btn operator-btn" data-value="AC">C</button>
+                    <button class="btn operator-btn" data-value="DEL"><i class="fa-regular fa-rectangle-xmark"></i></button>
+                    <button class="btn operator-btn" data-value="/">÷</button>
+                    <button class="btn operator-btn" data-value="%">%</button>
+
+                    <button class="btn function-btn" data-value="sqrt(">√</button>
+                    <button class="btn number-btn" data-value="7">7</button>
+                    <button class="btn number-btn" data-value="8">8</button>
+                    <button class="btn number-btn" data-value="9">9</button>
+                    <button class="btn operator-btn" data-value="*">×</button>
+
+                    <button class="btn function-btn" data-value="^">x^</button>
+                    <button class="btn number-btn" data-value="4">4</button>
+                    <button class="btn number-btn" data-value="5">5</button>
+                    <button class="btn number-btn" data-value="6">6</button>
+                    <button class="btn operator-btn" data-value="-">−</button> 
+
+                    <button class="btn function-btn" data-value="pi">π</button>
+                    <button class="btn number-btn" data-value="1">1</button>
+                    <button class="btn number-btn" data-value="2">2</button>
+                    <button class="btn number-btn" data-value="3">3</button>
+                    <button class="btn operator-btn" data-value="+">+</button>
+
+                    
+                    <button class="btn swipe-btn" title="Expand"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                    <button class="btn function-btn" data-value="e">e</button>
+                    <button class="btn number-btn" data-value="0">0</button>
+                    <button class="btn number-btn" data-value=".">.</button>
+                    <button class="btn operator-btn" data-value="=">=</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

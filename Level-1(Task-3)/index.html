@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="main-container" aria-label="main-container-section">
+        <div class="heading-container">
+            <div class="logo">
+                <span>UT</span>
+            </div>
+            <div class="heading">
+                <h3>Unit Ratio Converter</h3>
+                <p>Professional tool to convert ratios between units - Clear,fast,and reliable</p>
+            </div>
+        </div>
+        <div class="form-description">
+            <div class="heading-description">
+                <h2>Convert units with confidence</h2>
+                <p>Enter any numeric value,Choose the input unit and the unit you want to convert to, then click Convert. The result will appear instantly.</p>
+            </div>
+            <div class="instructions">
+                <h3>How it works</h3>
+                <ul>
+                    <li>Type a numeric value in the input field.</li>
+                    <li>Select the unit your value is currently in (From).</li>
+                    <li>Select the unit you want to convert to (To).</li>
+                    <li>Click <b>Convert</b>. The converted value appears on the right.</li>
+                    <li>Click <b>Reset</b> to clear the fields and start again.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card" aria-label="temperature-conversion-card">
+            <form id="tempForm" aria-label="temperature-conversion-form">
+                <label for="tempvalue">Value:</label>
+                <input type="number" id="tempvalue" step="any" inputmode="decimal" placeholder="e.g. 42" aria-label="value to convert" required>
+                <div class="row">
+                    <div style="flex: 1;">
+                        <label for="yourTemp">From:</label>
+                        <select id="yourTemp" name="scale">
+                            <option value="celsius" selected>Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="scale">To:</label>
+                        <select id="scale" name="scale">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit" selected>Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="primary">Convert</button>
+                <button type="reset" class="secondary" id="resetBtn">Reset</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
